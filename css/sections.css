@@ -1,0 +1,283 @@
+@import url('variablen.css');
+@import url('style.css');
+
+/* Header */
+header {
+    background-color: var(--base-dark);
+    color: var(--light);
+}
+
+/* Nav */
+.hamburger {
+    display: none;
+}
+
+nav {
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    padding: 0 1rem;
+}
+
+nav a {
+    color: var(--light);
+}
+
+.icons {
+    gap: 0.8rem;
+}
+
+/* Hero Sektion */
+.hero-content {
+    height: 90vh;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.hero-content h1 {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+}
+
+/* .hero-content .intro,
+.intro+img {
+    flex: 0 1 500px;
+} */
+
+.intro {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.cta-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Produkte Sektion */
+.product-section {
+    flex-direction: column;
+}
+
+.products-contentwrapper {
+    width: 80%;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    border: 1px solid #e0e0e0;
+    box-shadow: 8px 8px 24px #e0e0e080;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.text-box {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.name-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kaufen {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topf-farbe {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.topffarbe-wahlen {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ellipse {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.farbe-option-1 {
+    background: #FCAC63;
+}
+
+.farbe-option-2 {
+    background: #EFEBE5;
+}
+
+.farbe-option-3 {
+    background: #D48E84;
+}
+
+.farbe-option-4 {
+    background: #6E572F;
+}
+
+.farbe-option-5 {
+    background: #8B5421;
+}
+
+/* About */
+/* Über Uns */
+.about-section {
+    background-color: var(--base-light);
+    gap: 6.4rem;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    max-width: 550px;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Kontakt */
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.kontakt-sektion {
+    background: var(--base-light);
+    gap: 6.5rem;
+    flex-wrap: wrap;
+}
+
+.kontakt-form {
+    width: 400px;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--light);
+    border: 1px var(--dark) solid;
+}
+
+.form-field textarea {
+    height: 5rem;
+    resize: vertical;
+    /* Optional: Allows the user to resize the textarea vertically */
+}
+
+/* footer */
+footer {
+    background: var(--dark);
+    color: white;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: white;
+}
+
+.social-icons {
+    gap: 2rem;
+}
+
+/* Media Queries */
+/* Tablet */
+@media screen and (width<=992px) {
+
+    /* Nav */
+    nav .icons,
+    nav a {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        width: 1rem;
+    }
+
+    /* Hero */
+    .intro {
+        text-align: center;
+        order: 2;
+    }
+
+    .hero-content .btn-secondary {
+        margin: 0 auto;
+    }
+
+}
+
+/* Smartphones */
+@media screen and (width<=576px) {
+
+    /* Hero */
+    .hero-content {
+        gap: 1rem;
+    }
+
+    .intro {
+        padding: 2rem;
+    }
+
+    /* Produkte Section */
+    .product-section {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .products-contentwrapper {
+        width: auto;
+    }
+
+    /* Über Uns */
+    .about-section {
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    /* Kontakt */
+    .kontakt-sektion {
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .kontakt-form+img {
+        display: none;
+    }
+}
